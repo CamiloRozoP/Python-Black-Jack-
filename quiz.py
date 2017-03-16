@@ -81,10 +81,9 @@ def contador(lista):
             return contador(lista[1:])+valor(lista[0])
 
 def repartirIni(lJugador, lCasa, lista):
-    lista[30]='A'
-    lJugador.append(lista[30])
+    lJugador.append(lista[0])
     lJugador.append(lista[2])
-    lCasa.append(lista[30])
+    lCasa.append(lista[1])
     print("Cartas jugador: " + str(lJugador))
     print("Cartas casa: " + str(lCasa))
     juego(lJugador, lCasa, lista[4:])
