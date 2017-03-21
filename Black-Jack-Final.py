@@ -53,8 +53,8 @@ def contador(lista):
 def comprobacion(lista,numero):
     for i in range(0,len(lista)):
         if (lista[i]==('A', 'CORAZONES') or lista[i]==('A', 'DIAMANTES') or lista[i]==('A', 'PICAS') or lista[i]==('A', 'TREBOLES')or lista[i]=='A'):
-            if (numero+10<22):
-                return numero+10
+            if (numero+11<22):
+                return numero+11
             else:
                 return numero
         else:
