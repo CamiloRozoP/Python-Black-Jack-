@@ -28,7 +28,7 @@ def juego1(lJugador, lCasa, lista):
             return "final"
 
     else:
-        return print("Perdio la CASA , tiene: " + str(comprobacion(lCasa,contador(lCasa))))
+        return print("Perdio la CASA  tiene: " + str(comprobacion(lCasa,contador(lCasa))))
 
 
 def creadorbaraja():
@@ -47,11 +47,9 @@ def contador(lista):
     if(len(lista)==0):
         return 0
     else:
-        for i in range(0,len(lista)):
-            return contador(lista[1:])+valor(lista[0])
+        return contador(lista[1:])+valor(lista[0])
 
 def comprobacion(lista,numero):
-    print(lista)
     if lista == []:
         return numero
     elif lista[0] in [('A', 'CORAZONES'),('A', 'DIAMANTES'),('A', 'PICAS'),('A', 'TREBOLES')] and numero+10<22:
