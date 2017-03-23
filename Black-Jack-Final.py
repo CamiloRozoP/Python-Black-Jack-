@@ -51,18 +51,17 @@ def contador(lista):
             return contador(lista[1:])+valor(lista[0])
 
 def comprobacion(lista,numero):
-    for i in range(0,len(lista)):
-        if (lista[i]==('A', 'CORAZONES') or lista[i]==('A', 'DIAMANTES') or lista[i]==('A', 'PICAS') or lista[i]==('A', 'TREBOLES')or lista[i]=='A'):
-            if (numero+11<22):
-                return numero+11
-            else:
-                return numero
-        else:
-            return numero
+    print(lista)
+    if lista == []:
+        return numero
+    elif lista[0] in [('A', 'CORAZONES'),('A', 'DIAMANTES'),('A', 'PICAS'),('A', 'TREBOLES')] and numero+10<22:
+        return comprobacion(lista[1:],numero+10)
+    else:
+        return comprobacion(lista[1:],numero)
 
 def repartirIni(lJugador, lCasa, lista):
     lJugador.append(lista[0])
-    lJugador.append(lista[2])
+    lJugador.append(lista[20])
     lCasa.append(lista[1])
     print("Cartas jugador: " + str(lJugador))
     print("Cartas casa: " + str(lCasa))
