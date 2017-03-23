@@ -76,5 +76,8 @@ def repartir(lJugador, lCasa, lista,turno):
         print("Cartas jugador: " + str(lJugador))
         print("Cartas casa: " + str(lCasa))
         juego1(lJugador, lCasa, lista[2:])
-
-juego([],[],creadorbaraja())
+while True:
+  juego([],[],creadorbaraja())
+  if(input("Desea continuar JUGANDO BLACK JACK? (Y/N)").upper() != "Y"):
+    break
+    
